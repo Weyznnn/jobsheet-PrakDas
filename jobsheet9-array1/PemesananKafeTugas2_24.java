@@ -16,7 +16,7 @@ public class PemesananKafeTugas2_24 {
             sc.nextLine();
             System.out.print("Masukkan nama menu "+(i+1)+": ");
             namaPesanan[i] = sc.nextLine();
-            System.out.print("Masukkan harga dari menu"+(i+1)+": Rp. ");
+            System.out.print("Masukkan harga dari menu "+(i+1)+": Rp. ");
             harga[i] = sc.nextDouble();
 
             total += harga[i];
