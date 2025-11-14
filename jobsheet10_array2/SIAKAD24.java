@@ -21,14 +21,14 @@ public class SIAKAD24 {
 
         System.out.println("\n=====================================");
         System.out.println("Rata-rata Nilai setiap Mata Kuliah:");
-        
-        for (int i = 0; i < 4; i++) {
+
+        for (int j = 0; j < 4; j++) {
             double totalPerMatkul = 0;
 
-            for (int j = 0; j < 3; j++) {
-                totalPerMatkul +=nilai[i][j];
+            for (int i = 0; i < 4; i++) {
+                totalPerMatkul += nilai[i][j];
             }
-            System.out.println("Mata kuliah " + (i+1) + ": " + totalPerMatkul/4);
+            System.out.println("Mata kuliah " + (j+1) + ": " + totalPerMatkul/4);
         }
     }
 }
