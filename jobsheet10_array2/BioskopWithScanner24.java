@@ -19,6 +19,12 @@ public class BioskopWithScanner24 {
             next = sc.nextInt();
             sc.nextLine();
 
+            for (int i = 0; i < penonton.length; i++) {
+                for (int j = 0; j < penonton.length; j++) {
+                    penonton[i][j] = "***";
+                }
+            }
+
             switch (next) {
                 case 1:
                 System.out.print("Masukkan nama: ");
@@ -33,7 +39,7 @@ public class BioskopWithScanner24 {
                     System.out.println("Kursi pada baris atau kolom tersebut tidak tersedia");
                     break;
                 }
-                if (penonton[baris-1][kolom-1] != null) {
+                if (penonton[baris-1][kolom-1] != "***") {
                     System.out.println("Kursi sudah terisi!");
                     break;
                 }
