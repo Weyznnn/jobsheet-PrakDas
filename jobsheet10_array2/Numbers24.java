@@ -1,5 +1,7 @@
 package jobsheet10_array2;
 
+import java.util.Arrays;
+
 public class Numbers24 {
     public static void main(String[] args) {
         int[][] myNumber = new int[3][];
@@ -7,5 +9,8 @@ public class Numbers24 {
         myNumber[1] = new int[3];
         myNumber[2] = new int[1];
         
+        for (int i = 0; i < myNumber.length; i++) {
+            System.out.println(Arrays.toString(myNumber[i]));
+        }
     }
 }
