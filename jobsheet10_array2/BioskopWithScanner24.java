@@ -7,24 +7,41 @@ public class BioskopWithScanner24 {
         Scanner sc = new Scanner(System.in);
         String[][] penonton = new String[4][2];
         int baris, kolom;
-        String nama, next;
+        String nama;
+        boolean keluar = false;
 
-        while (true) {
-            System.out.print("Masukkan nama: ");
-            nama = sc.nextLine();
-            System.out.print("Masukkan baris: ");
-            baris = sc.nextInt();
-            System.out.print("Masukkan kolom: ");
-            kolom = sc.nextInt();
+        while (!keluar) {
+            int next = 0;
+            System.out.println("Menu 1: Input data penonton");
+            System.out.println("Menu 2: Tampilkan daftar penonton");
+            System.out.println("Menu 3: Exit");
+            System.out.print("Pilih menu (angka): ");
+            next = sc.nextInt();
             sc.nextLine();
 
-            penonton[baris-1][kolom-1] = nama;
-
-            System.out.print("Input penonton lainnya? (y/n): ");
-            next = sc.nextLine();
-
-            if (next.equalsIgnoreCase("n")) {
-                break;
+            switch (next) {
+                case 1:
+                System.out.print("Masukkan nama: ");
+                nama = sc.nextLine();
+                System.out.print("Masukkan baris: ");
+                baris = sc.nextInt();
+                System.out.print("Masukkan kolom: ");
+                kolom = sc.nextInt();
+                sc.nextLine();
+    
+                penonton[baris-1][kolom-1] = nama;
+                    break;
+                case 2:
+                for (int i = 0; i < penonton.length; i++) {
+                    System.out.println("Penonton pada baris ke-"+(i+1)+": "+String.join(", ", penonton[i]));
+                };
+                    break;
+                case 3:
+                    keluar = true;
+                    break;
+                default:
+                    System.out.println("Masukkan menu yang valid!");
+                    break;
             }
         }
         sc.close();
