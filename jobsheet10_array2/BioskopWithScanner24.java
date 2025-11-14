@@ -28,6 +28,11 @@ public class BioskopWithScanner24 {
                 System.out.print("Masukkan kolom: ");
                 kolom = sc.nextInt();
                 sc.nextLine();
+                
+                if (baris > 4 || baris < 1 || kolom < 1 || kolom > 2) {
+                    System.out.println("Kursi pada baris atau kolom tersebut tidak tersedia");
+                    break;
+                }
     
                 penonton[baris-1][kolom-1] = nama;
                     break;
