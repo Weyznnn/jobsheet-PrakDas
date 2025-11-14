@@ -28,7 +28,7 @@ public class SIAKAD24 {
             for (int j = 0; j < 3; j++) {
                 totalPerMatkul +=nilai[i][j];
             }
-            System.out.println("Mata kuliah " + (i+1) + ": " + totalPerMatkul/3);
+            System.out.println("Mata kuliah " + (i+1) + ": " + totalPerMatkul/4);
         }
     }
 }
