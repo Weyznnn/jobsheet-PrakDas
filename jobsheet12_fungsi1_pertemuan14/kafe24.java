@@ -1,10 +1,17 @@
 package jobsheet12_fungsi1_pertemuan14;
 
 public class kafe24 {
-    public static void Menu(String namaPelangan, boolean isMember) {
+    public static void Menu(String namaPelangan, boolean isMember, String kodePromo) {
         System.out.println("Selamat datang, "+namaPelangan+"!");
         if (isMember) {
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
+        }
+        if (kodePromo.equalsIgnoreCase("DISKON50")) {
+            System.out.println("Selamat anda mendapatkan diskon sebesar 50%!");
+        } else if (kodePromo.equalsIgnoreCase("DISKON30")) {
+            System.out.println("Selamat anda mendapatkan diskon sebesar 30%!");
+        } else {
+            System.out.println("Kode promo invalid!");
         }
         System.out.println("===== MENU RESTO KAFE =====");
         System.out.println("1. Kopi Hitam - Rp 15,000");
@@ -16,6 +23,6 @@ public class kafe24 {
         System.out.println("Silahkan pilih menu yang anda inginkan.");
     }
     public static void main(String[] args) {
-        Menu("Andi", true);
+        Menu("Andi", true, "DISKON10");
     }
 }
