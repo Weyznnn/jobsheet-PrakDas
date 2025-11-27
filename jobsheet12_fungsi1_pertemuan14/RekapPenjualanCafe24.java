@@ -15,11 +15,15 @@ public class RekapPenjualanCafe24 {
         sc.close();
     }
 
-    public static void outputData(int[][] array) {
+    public static void outputData(int[][] array, int hariJual) {
         System.out.println("=======================================================================");
         System.out.println("------------------------- Penjualan Cafe ------------------------------");
         System.out.println("=======================================================================");
-        System.out.println("\t\tHari 1  Hari 2  Hari 3  Hari 4  Hari 5  Hari 6  Hari 7");
+        System.out.print("\t\t");
+        for (int i = 0; i < hariJual; i++) {
+            System.out.print("Hari "+(i+1)+"\t");
+        }
+        System.out.println();
 
         for (int i = 0; i < array.length; i++) {
             System.out.print("Menu ke-"+(i+1)+"\t");
@@ -55,12 +59,19 @@ public class RekapPenjualanCafe24 {
         }
     }
     public static void main(String[] args) {
-        int penjualan[][] = new int[5][7];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Masukkan jumlah hari penjualan");
+        int hariJual = sc.nextInt();
+        System.out.println("Masukkan jumlah menu");
+        int jmlMenu = sc.nextInt();
+
+        int penjualan[][] = new int[jmlMenu][hariJual];
         inputData(penjualan);
-        outputData(penjualan);
+        outputData(penjualan, hariJual);
         System.out.println();
         menuTertinggi(penjualan);
         System.out.println();
         rataRataMenu(penjualan);
+        sc.close();
     }
 }
